@@ -27,6 +27,7 @@ pub_key=$(cat publickey)
 rm privatekey
 rm publickey
 
+# -- Write new client config gile -- #
 cat << EOT > client.conf
 [Interface]
 Address = ${desired_ip}/24
@@ -40,6 +41,7 @@ PersistentKeepalive = 25
 
 EOT
 
+# -- Append new client (peer) into server config -- #
 cat << EOT >> ${config_file}
 [Peer]
 # ${peer_name}
