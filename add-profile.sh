@@ -9,7 +9,7 @@ fi
 config_file=${1}
 desired_ip=${2}
 peer_name=${3}
-server_pubkey="B3yQXa+d8QffTQnW6PIfbIomcr2WwDgaJFfxm3yB3Aw="
+server_pubkey="Server public key"
 # -- Check config file exists -- #
 if [ ! -f  ${config_file} ]
 then
@@ -34,7 +34,7 @@ PrivateKey = ${priv_key}
 
 [Peer]
 PublicKey = ${server_pubkey}
-Endpoint = cronos.typedef.cf:51820
+Endpoint = server.domain.xyz:51820
 AllowedIPs = 0.0.0.0/0, ::/0 
 PersistentKeepalive = 25
 
